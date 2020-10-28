@@ -11,7 +11,7 @@ visit [purplship-demo](https://purplship-demo.herokuapp.com/)
 
 Demo Credentials | |
 --- | --- |
-username | `admin`  |
+username | `admin@test.com`  |
 password | `demo` |
 
 *Note that the demo server is public so usage data is wiped regularly*
