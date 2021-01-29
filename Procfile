@@ -1,1 +1,1 @@
-web: gunicorn app.wsgi --preload --log-file -
+web: DJANGO_SETTINGS_MODULE='heroku_settings' gunicorn purpleserver.wsgi --preload --log-file -
