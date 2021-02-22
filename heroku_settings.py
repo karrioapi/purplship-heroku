@@ -9,9 +9,11 @@ from purpleserver.settings import *
 
 
 SECURITY, *EXTRA_MIDDLEWARE = MIDDLEWARE
-MIDDLEWARE = (
-    [SECURITY] + ['whitenoise.middleware.WhiteNoiseMiddleware'] + EXTRA_MIDDLEWARE
-)
+MIDDLEWARE = [
+     SECURITY,
+     'whitenoise.middleware.WhiteNoiseMiddleware',
+    *EXTRA_MIDDLEWARE
+]
 
 
 # Heroku: Update database configuration from $DATABASE_URL.
