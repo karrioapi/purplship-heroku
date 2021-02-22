@@ -6,24 +6,6 @@ ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BASE_DIR="${PWD##*/}"
 ENV_DIR=".venv"
 
-
-export DEBUG_MODE=False
-export ALLOWED_HOSTS=*
-export USE_HTTPS=True
-export SECRET_KEY="n*s-ex6@ex_r1i%bk=3jd)p+lsick5bi*90!mbk7rc3iy_op1r"
-
-export EMAIL_HOST="localhost"
-export EMAIL_PORT=1025
-
-export DATABASE_HOST="0.0.0.0"
-export DATABASE_PORT=5432
-export DATABASE_NAME=db
-export DATABASE_ENGINE=postgresql_psycopg2
-export DATABASE_USERNAME=postgres
-export DATABASE_PASSWORD=postgres
-
-export DJANGO_SETTINGS_MODULE=app.settings
-
 deactivate_env() {
   if command -v deactivate &> /dev/null
   then
@@ -51,6 +33,11 @@ create_env() {
 
 init() {
     create_env && pip install -r "${ROOT:?}/requirements.txt"
+}
+
+shell() {
+	echo "Run shell to confirm packages and settings loaded correctly"
+	DJANGO_SETTINGS_MODULE='heroku_settings' python -m purpleserver shell
 }
 
 

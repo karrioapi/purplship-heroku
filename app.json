@@ -1,7 +1,7 @@
 {
   "name": "purplship",
   "description": "The Open Source Multi-carrier Shipping API",
-  "repository": "https://github.com/PurplShip/purplship-server-demo",
+  "repository": "https://github.com/PurplShip/purplship-heroku",
   "website": "https://purplship.com",
   "logo": "https://docs.purplship.com/_media/icon.png",
   "keywords": ["Multi-carrier", "Shipping API", "Canada Post", "FedEx", "DHL", "UPS", "Purolator"],
@@ -19,6 +19,12 @@
     "ADMIN_PASSWORD": {
       "description": "The default system administrator password.",
       "value": "demo"
+    },
+    "DEBUG_MODE": "False",
+    "USE_HTTPS": "True",
+    "ALLOWED_HOSTS": {
+      "description": "The list of hosts allowed by the server. e.g: 'example.herokuapp.com example.com'",
+      "value": "*"
     }
   },
   "buildpacks": [
