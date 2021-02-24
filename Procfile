@@ -1,1 +1,1 @@
-web: DJANGO_SETTINGS_MODULE='heroku_settings' gunicorn purpleserver.wsgi --preload --log-file -
+web: export DJANGO_SETTINGS_MODULE='heroku_settings'; purplship collectstatic --noinput && gunicorn purpleserver.wsgi --preload --log-file -

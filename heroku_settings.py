@@ -10,8 +10,8 @@ from purpleserver.settings import *
 
 SECURITY, *EXTRA_MIDDLEWARE = MIDDLEWARE
 MIDDLEWARE = [
-     SECURITY,
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    SECURITY,
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     *EXTRA_MIDDLEWARE
 ]
 
